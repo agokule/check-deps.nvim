@@ -22,7 +22,7 @@ Use your favorite plugin manager:
 {
   "agokule/check-deps.nvim",
   config = function()
-    require("nvim-deps-check").setup({
+    require("check-deps").setup({
       list = {
         {
           name = "rg",
