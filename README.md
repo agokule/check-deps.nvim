@@ -1,6 +1,8 @@
 # check-deps.nvim
 
-A lightweight Neovim plugin to check for external dependencies and help install them.
+A lightweight and barebones Neovim plugin to check for external dependencies and help install them.
+
+https://github.com/user-attachments/assets/ae0c5c4a-09ce-4364-a166-a6bc759e9a70
 
 ## Features
 
