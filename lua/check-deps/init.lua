@@ -2,7 +2,7 @@ local M = {}
 
 local default_config = {
   list = {
-    { name = 'yessir', cmd = 'yessir', install = { windows = { 'winget install yessir' } } }
+    { name = 'yessir', cmd = 'yessir', install = { windows = { 'winget install yessir' }, linux = { 'sudo apt install yessir' } } }
   },
   auto_check = false,
   open_float = true,
@@ -11,7 +11,7 @@ local default_config = {
 local config = {}
 
 local function detect_os()
-  local uname = vim.loop.os_uname().sysname:lower()
+  local uname = (vim.loop.os_uname() or vim.uv.os_uname()).sysname:lower()
   if uname:match("darwin") then return "mac" end
   if uname:match("linux") then
     return "linux"
